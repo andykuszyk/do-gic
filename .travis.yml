@@ -1,0 +1,9 @@
+branches:
+  only:
+  - master
+script:
+- "./deploy.sh"
+before_install:
+- openssl aes-256-cbc -K $encrypted_5990f85256f2_key -iv $encrypted_5990f85256f2_iv
+  -in id_rsa.enc -out id_rsa -d
+- chmod 700 id_rsa

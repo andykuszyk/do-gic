@@ -1,0 +1,10 @@
+version: "3"
+services:
+    gic:
+        image: andykuszyk/gitlab-issue-comments
+        environment:
+            - GITLAB_TOKEN=[gitlab-token]
+        networks:
+            - net
+networks:
+    net:
